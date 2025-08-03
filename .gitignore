@@ -1,0 +1,40 @@
+## Ignore build results
+bin/
+obj/
+
+## Ignore user-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.vsp
+*.vspx
+
+## Ignore JetBrains Rider
+.idea/
+
+## Ignore VS Code
+.vscode/
+
+## Ignore Visual Studio folders
+.vs/
+
+## Ignore MacOS system files
+.DS_Store
+
+## Ignore environment files
+.env
+
+## Ignore logs
+*.log
+
+## Ignore test result files
+TestResults/
+
+## Ignore NuGet packages
+*.nupkg
+*.snupkg
+packages/
+
+## Ignore publish output
+publish/

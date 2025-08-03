@@ -1,0 +1,11 @@
+C:\Users\Dell\Desktop\Task Management\TaskManagementSolution\TaskManagement.Shared\bin\Debug\net6.0\TaskManagement.Shared.deps.json
+C:\Users\Dell\Desktop\Task Management\TaskManagementSolution\TaskManagement.Shared\bin\Debug\net6.0\TaskManagement.Shared.dll
+C:\Users\Dell\Desktop\Task Management\TaskManagementSolution\TaskManagement.Shared\bin\Debug\net6.0\TaskManagement.Shared.pdb
+C:\Users\Dell\Desktop\Task Management\TaskManagementSolution\TaskManagement.Shared\obj\Debug\net6.0\TaskManagement.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dell\Desktop\Task Management\TaskManagementSolution\TaskManagement.Shared\obj\Debug\net6.0\TaskManagement.Shared.AssemblyInfoInputs.cache
+C:\Users\Dell\Desktop\Task Management\TaskManagementSolution\TaskManagement.Shared\obj\Debug\net6.0\TaskManagement.Shared.AssemblyInfo.cs
+C:\Users\Dell\Desktop\Task Management\TaskManagementSolution\TaskManagement.Shared\obj\Debug\net6.0\TaskManagement.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\Task Management\TaskManagementSolution\TaskManagement.Shared\obj\Debug\net6.0\TaskManagement.Shared.dll
+C:\Users\Dell\Desktop\Task Management\TaskManagementSolution\TaskManagement.Shared\obj\Debug\net6.0\refint\TaskManagement.Shared.dll
+C:\Users\Dell\Desktop\Task Management\TaskManagementSolution\TaskManagement.Shared\obj\Debug\net6.0\TaskManagement.Shared.pdb
+C:\Users\Dell\Desktop\Task Management\TaskManagementSolution\TaskManagement.Shared\obj\Debug\net6.0\ref\TaskManagement.Shared.dll

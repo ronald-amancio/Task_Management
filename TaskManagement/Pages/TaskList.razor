@@ -1,0 +1,58 @@
+﻿@page "/tasklist"
+@using TaskManagement.Shared
+@using TaskManagement.Services
+@using Microsoft.AspNetCore.Components.Forms
+
+<h3>Tasks</h3>
+
+<button class="btn btn-primary mb-3" @onclick="ShowAddForm">+ Add Task</button>
+
+@if (tasks.Count == 0)
+{
+    <div class="alert alert-info">No tasks found.</div>
+}
+else
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Status</th>
+                <th>Priority</th>
+                <th>Created</th>
+                <th>Due</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var task in tasks)
+            {
+                <tr>
+                    <td>@task.Title</td>
+                    <td title="@task.Description" class="text-truncate" style="max-width: 200px;">
+                        @task.Description
+                    </td>
+                    <td><span class="badge bg-secondary">@task.Status</span></td>
+                    <td><span class="badge bg-@GetPriorityClass(task.Priority)">@task.Priority</span></td>
+                    <td>@task.CreatedDate.ToShortDateString()</td>
+                    <td>@task.DueDate?.ToShortDateString()</td>
+                    <td>
+                        <button class="btn btn-sm btn-primary me-1" @onclick="() => Edit(task)">Edit</button>
+                        <button class="btn btn-sm btn-danger" @onclick="async () => await Delete(task.Id)">Delete</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="d-flex justify-content-between align-items-center mt-3">
+        <button class="btn btn-outline-secondary" @onclick="PrevPage" disabled="@(pages == 1)">Previous</button>
+
+        <span>Page @pages of @totalPages (@totalCount items)</span>
+
+        <button class="btn btn-outline-secondary" @onclick="NextPage" disabled="@(pages == totalPages)">Next</button>
+    </div>
+}
+
+<TaskForm @ref="taskForm" OnSaved="OnTaskSaved" />
+<ConfirmDialog @ref="confirmDialog" />

@@ -1,0 +1,76 @@
+﻿@page "/taskform"
+@using Microsoft.AspNetCore.Components.Forms
+
+@if (IsVisible)
+{
+    <EditForm Model="TaskModel" OnValidSubmit="HandleValidSubmit">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div class="modal fade show d-block" tabindex="-1" style="background-color: rgba(0,0,0,0.5);">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">@((TaskModel.Id == Guid.Empty) ? "Add Task" : "Edit Task")</h5>
+                        <button type="button" class="btn-close" @onclick="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label>Title</label>
+                            <InputText class="form-control" @bind-Value="TaskModel.Title" />
+                            <ValidationMessage For="@(() => TaskModel.Title)" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label>Description</label>
+                            <InputTextArea class="form-control"
+                                           @bind-Value="TaskModel.Description"
+                                           maxlength="500"
+                                           style="resize: vertical; min-height: 100px;" />
+                            <ValidationMessage For="@(() => TaskModel.Description)" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label>Status</label>
+                            <InputSelect class="form-select" @bind-Value="TaskModel.Status">
+                                @foreach (var status in Enum.GetValues(typeof(TaskManagement.Shared.TaskStatus)))
+                                {
+                                    <option value="@status">@status</option>
+                                }
+                            </InputSelect>
+                        </div>
+
+                        <div class="mb-3">
+                            <label>Priority</label>
+                            <InputSelect class="form-select" @bind-Value="TaskModel.Priority">
+                                @foreach (TaskPriority priority in Enum.GetValues(typeof(TaskPriority)))
+                                {
+                                    <option value="@priority">@priority</option>
+                                }
+                            </InputSelect>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label>Created Date</label>
+                                <InputDate class="form-control"
+                                           @bind-Value="TaskModel.CreatedDate" />
+                                <ValidationMessage For="@(() => TaskModel.CreatedDate)" />
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label>Due Date</label>
+                                <InputDate class="form-control"
+                                           @bind-Value="TaskModel.DueDate" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success">Save</button>
+                        <button type="button" class="btn btn-secondary" @onclick="Close">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </EditForm>
+}

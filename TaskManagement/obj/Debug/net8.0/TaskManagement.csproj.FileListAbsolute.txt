@@ -1,0 +1,9 @@
+C:\Users\Dell\Desktop\Task Management\TaskManagement\obj\Debug\net8.0\TaskManagement.csproj.AssemblyReference.cache
+C:\Users\Dell\Desktop\Task Management\TaskManagement\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\Dell\Desktop\Task Management\TaskManagement\obj\Debug\net8.0\TaskManagement.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dell\Desktop\Task Management\TaskManagement\obj\Debug\net8.0\TaskManagement.AssemblyInfoInputs.cache
+C:\Users\Dell\Desktop\Task Management\TaskManagement\obj\Debug\net8.0\TaskManagement.AssemblyInfo.cs
+C:\Users\Dell\Desktop\Task Management\TaskManagement\obj\Debug\net8.0\TaskManagement.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\Task Management\TaskManagement\obj\Debug\net8.0\TaskManagement.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Dell\Desktop\Task Management\TaskManagement\obj\Debug\net8.0\TaskManagement.RazorAssemblyInfo.cache
+C:\Users\Dell\Desktop\Task Management\TaskManagement\obj\Debug\net8.0\TaskManagement.RazorAssemblyInfo.cs

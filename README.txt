@@ -20,23 +20,38 @@ Task Management Solution
    - git clone https://github.com/ronald-amancio/Task_Management.git
      cd TaskManagementSolution
 
-5. Run the Web API
-   - dotnet run --project TaskManagementAPI
+5. After cloning the repository, it consists of three main project folders
+   - TaskManagement
+   - TaskManagementAPI
+   - TaskManagementSolution
+	
+         * Open the Main Solution named TaskManagementSolution 
+         5a. Running the application thru visual studio
+		- It is being already set in the project startup properties, just click Start
+		
+		API should be running at:
+     		http://localhost:5085/swagger/index.html
+
+		UI Should be running at:
+     		http://localhost:5268	
+ 
+	 5b. Running the application thru manual or Navigating the Web API
+   		- dotnet run --project TaskManagementAPI
      
-     API should be running at:
-     http://localhost:5085/swagger/index.html
+     		API should be running at:
+     		http://localhost:5085/swagger/index.html
 
-6. Run the Blazor Server App
-   - dotnet run --project TaskManagement
+	 5c. Run the Blazor Server App thru manual
+   		- dotnet run --project TaskManagement
 
-     UI Should be running at:
-     http://localhost:5268
+     		UI Should be running at:
+     		http://localhost:5268
 
-7. Running Tests
-   - cd TaskManagement.Tests
-     dotnet test
+	 5d. Running Tests
+   		- cd TaskManagement.Tests
+     	          dotnet test
 
-    Test Packages:
-    . dotnet add package xunit
-    . dotnet add package Microsoft.AspNetCore.Mvc.Testing
-    . dotnet add package Moq
+    		Test Packages:
+    		. dotnet add package xunit
+    		. dotnet add package Microsoft.AspNetCore.Mvc.Testing
+    		. dotnet add package Moq
